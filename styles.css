@@ -64,10 +64,6 @@ a {
 /*                  UPPER-NAVBAR                  */
 /* ---------------------------------------------- */
 
-header > * {
-    padding-left: 10rem;
-}
-
 #upper-section {
     background-color: #0a0927;
     color: var(--white-color);
@@ -171,6 +167,10 @@ header > * {
 /*                  FIRST-NAVBAR                  */
 /* ---------------------------------------------- */
 
+#upper-section, #left-nav, #second-nav {
+    padding-left: 162px;
+}
+
 #first-nav {
     background-color: var(--primary-color);
     border-top: 1px solid var(--gray);
@@ -186,6 +186,10 @@ header > * {
 
 #first-nav li:not(.selected) {
     cursor: pointer;
+}
+
+#left-nav {
+    position: relative;
 }
 
 .selected {
@@ -237,6 +241,23 @@ header > * {
     height: 30px;
     width: 30px;
 }
+
+#logo-link {
+    position: absolute;
+    left: 0;
+    top: -8px;
+    padding: 0 40px;
+}
+
+#logo {
+    height: auto;
+    width: 82px;
+
+}
+
+/* ---------------------------------------------- */
+/*                  SECOND-NAVBAR                 */
+/* ---------------------------------------------- */
 
 #second-nav {
     background: linear-gradient(90deg, var(--red-color), var(--blue-color));
