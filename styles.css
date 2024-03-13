@@ -310,3 +310,68 @@ li.selected {
     height: 4px;
 }
 
+/* ---------------------------------------------- */
+/*                  HERO-SECTION                  */
+/* ---------------------------------------------- */
+
+#hero-section {
+    position: relative;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-section::before {
+    content: '';
+    background-image: url('img/stripes-left.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    position: absolute;
+    width: 120%;
+    height: 100%;
+}
+
+#hero-section::after {
+    content: '';
+    background-image: url('img/stripes-right.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#hero-section h1 {
+    color: var(--yellow);
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+#hero-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+#hero-photo {
+    background-image: url('img/supporters.webp');
+}
+
+#hero-shadow {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    background: linear-gradient(0deg, var(--primary-color) 0, rgba(24, 23, 51, .45) 70%, rgba(0, 0, 0, 0));
+    height: 25%;
+    width: 100%;
+
+}
