@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
    --primary-color: #181733;
    --yellow: #fdc52c;
-   --black-color: #222222
+   --black-color: #222222;
+   --white-color: #FFFFFF;
+   --blue-color: #154284;
+   --red-color: #cd122d;
 }
 
 * {
@@ -11,4 +16,139 @@
 
 body {
     background-color: var(--primary-color);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+/* ---------------------------------------------- */
+/*                 GLOBAL STYLES                  */
+/* ---------------------------------------------- */
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.content-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------- */
+/*                    NAVBAR                      */
+/* ---------------------------------------------- */
+
+#upper-section {
+    background-color: #0a0927;
+    color: var(--white-color);
+}
+
+#announcement {
+    background: linear-gradient(90deg, var(--blue-color), var(--primary-color));
+    border-radius: 50px;
+    padding: 0.5em 1.5em;
+    font-weight: 500;
+    font-size: 0.8em;
+    margin-left: 10rem;
+}
+
+#announcement span:last-of-type {
+    color: var(--yellow);
+}
+
+#user-section {
+    gap: 1.1em;
+    padding: 0.3em 0;
+    background: rgb(18, 48, 93);
+    background: radial-gradient(circle, rgb(18, 48, 93) 0%, rgba(10,9,39,1) 66%);
+}
+
+#user-section * {
+    font-size: 0.85em;
+}
+
+#user-section button {
+    color: var(--white-color);
+    height: 25px;
+    padding: 1.5em;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#user-section button:first-of-type {
+    padding: 1.5em 1em;
+}
+
+#user-section button:first-of-type:hover {
+    text-decoration: underline;
+}
+
+#user-section svg {
+    fill: var(--white-color);
+}
+
+#user-section button span {
+    margin-right: 10px;
+}
+
+#user-section button:first-of-type span {
+    background-color: var(--blue-color);
+    border-radius: 100%;
+    padding: 0.75em;
+}
+
+#user-section button:first-of-type svg {
+    height: 16px;
+}
+
+#user-section button:last-of-type svg {
+    height: 22px;
+}
+
+#user-section button:last-of-type {
+    background: linear-gradient(90deg, rgb(152, 0, 0), var(--red-color));
+}
+
+.user-section-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 0.5em;
+    height: 25px;
+    width: 25px;
+    cursor: default;
+    transition: background-color 300ms;
+}
+
+.user-section-link:last-of-type {
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+.user-section-link:last-of-type svg {
+    height: 15px;
+    width: 15px;
+}
+
+.user-section-link:last-of-type span {
+    font-size: 0.4em !important;
+}
+
+.user-section-link:hover {
+    background-color: var(--red-color);
 }
