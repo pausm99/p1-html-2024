@@ -1,0 +1,14 @@
+:root {
+   --primary-color: #181733;
+   --yellow: #fdc52c;
+   --black-color: #222222
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+}
