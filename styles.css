@@ -456,8 +456,10 @@ li.selected {
 
 .players {
     gap: 0.5em;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em 0;
+    padding-bottom: 2em !important;
 }
 
 .player {
@@ -467,8 +469,19 @@ li.selected {
 }
 
 @media (min-width: 400px) {
+    .players {
+        grid-template-columns: 1fr 1fr;
+        padding: 1em 0.25em;
+    }
+
     .player {
         flex-basis: calc(50% - 0.5em);
+    }
+}
+
+@media (min-width: 600px) {
+    .players {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
