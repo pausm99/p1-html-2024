@@ -376,3 +376,166 @@ li.selected {
     width: 100%;
 
 }
+
+/* ---------------------------------------------- */
+/*                  MAIN-SECTION                  */
+/* ---------------------------------------------- */
+
+#first-team {
+    background-color: var(--white-color);
+    padding: 0.5em;
+    padding-bottom: 0.75em;
+    margin: 0 5px;
+    border-radius: 1.5em;
+}
+
+#first-team-header {
+    padding: 0.5em;
+    padding-bottom: 0.85em;
+}
+
+#first-team-header > * {
+    flex: 1;
+}
+
+#first-team-header h2 {
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#presented-sponsor span {
+    text-transform: uppercase;
+    color: gray;
+    font-weight: 600;
+    font-size: 0.6rem;
+}
+
+#presented-sponsor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#presented-sponsor img {
+    height: 100px;
+    width: auto;
+}
+
+#first-team-roles {
+    gap: 0.5em;
+    overflow-y: scroll;
+    padding: 6px 0;
+    margin: 1.5em 0;
+}
+
+#first-team-roles li {
+    padding: 0.2em 0.8em;
+    background: rgba(150, 150, 150, 0.1);
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#first-team-roles a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.75em;
+    text-wrap: nowrap;
+}
+
+.player-role {
+   text-align: center; 
+}
+
+.player-role h3 {
+    background: linear-gradient(90deg, var(--red-color), var(--blue-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.players {
+    gap: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.player {
+    flex: 1 0 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 400px) {
+    .player {
+        flex-basis: calc(50% - 0.5em);
+    }
+}
+
+.player img {
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.player::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 45%;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(17, 17, 17, 0.6), rgba(16, 16, 16, 0.95));
+    z-index: 2;
+}
+
+.player-back-header {
+    position: absolute;
+    bottom: 12%;
+    width: 90;
+    transform: translate(-50%);
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    background: linear-gradient(rgba(169, 169, 169, 0.5), transparent);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+}
+
+@media (min-width: 400px) {
+    .player-back-header {
+        font-size: 3.5rem;
+        bottom: 25%;
+    }
+}
+
+.player-main-header {
+    color: var(--white-color);
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, 0);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: bold;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+.player-main-header h4 {
+    font-weight: 200;
+}
+
+.role {
+    font-size: 0.65em;
+    color: rgb(206, 206, 206);
+    font-weight: 600;
+}
+
+.player-stats {
+    display: none;
+}
