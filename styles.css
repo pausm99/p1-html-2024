@@ -985,3 +985,78 @@ li.selected {
         max-width: 88rem;
     }
 }
+
+/* ---------------------------------------------- */
+/*                    SPONSORS                    */
+/* ---------------------------------------------- */
+
+#sponsors {
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* #sponsors-pattern {
+    position: absolute;
+    top: 0;
+    width: 300%;
+    left: -100%;
+    height: 8rem;
+    opacity: 0.8;
+    overflow: hidden;
+}
+
+#sponsors-pattern svg {
+    width: 100%;
+    height: 100%;
+} */
+
+#sponsors h2 {
+    color: var(--white-color);
+    padding: 4em 0;
+}
+
+#sponsor-title {
+    color: var(--yellow);
+    font-weight: 400;
+    font-size: 0.8em;
+    position: relative;
+}
+
+@media (min-width: 840px) {
+    #sponsors h2 {
+        font-size: 3em;
+    }
+    
+    #sponsor-title {
+        font-size: 1.4em;
+    }
+}
+
+#sponsors-logos {
+    gap: 2rem;
+    height: auto;
+    padding: 2em;
+    justify-content: space-evenly;
+}
+
+@media (min-width: 1500px) {
+    #sponsors-logos {
+        max-width: 88rem;
+        margin: 0 auto;
+    }
+}
+
+#sponsors-logos a {
+    width: 20%;
+    max-width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sponsors-logos svg {
+    height: 100%;
+    width: 100%;
+    fill: var(--white-color);
+}
