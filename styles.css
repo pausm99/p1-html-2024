@@ -466,6 +466,7 @@ li.selected {
     flex: 1 0 100%;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 @media (min-width: 400px) {
@@ -516,6 +517,7 @@ li.selected {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: 1;
+    transition: transform 300ms ease;
 }
 
 @media (min-width: 400px) {
@@ -537,6 +539,7 @@ li.selected {
     font-weight: bold;
     z-index: 3;
     opacity: 0.8;
+    transition: transform 300ms ease;
 }
 
 .player-main-header h4 {
@@ -550,5 +553,48 @@ li.selected {
 }
 
 .player-stats {
-    display: none;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    color: var(--white-color);
+    z-index: 3;
+    transition: transform 300ms ease;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    border-top: 1px solid var(--gray);
+    margin: 0 1.5em;
+}
+
+.stats-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.2em;
+}
+
+
+@media (min-width: 840px) {
+    .player:hover .player-back-header {
+        transform: translate(-50%, -30%);
+    }
+
+    .player:hover .player-main-header {
+        transform: translate(-50%, -85%);
+    }
+
+    .player:hover .player-stats {
+        transform: translateY(0%);
+    }
+
+    .stat-season, .stat-best {
+        display: none;
+    }
 }
