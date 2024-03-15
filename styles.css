@@ -436,6 +436,12 @@ li.selected {
     }
 }
 
+@media (min-width: 1000px) {
+    #first-team-header h2 {
+        padding-left: 0.5em;
+    }
+}
+
 #presented-sponsor span {
     text-transform: uppercase;
     color: gray;
