@@ -433,8 +433,6 @@ li.selected {
     #presented-sponsor-container {
         padding: 0 1.5em;
     }
-
-
 }
 
 #presented-sponsor span {
@@ -501,6 +499,10 @@ li.selected {
     padding: 1em 0;
     padding-bottom: 2em !important;
 }
+
+/* ---------------------------------------------- */
+/*                    PLAYERS                     */
+/* ---------------------------------------------- */
 
 .player {
     flex: 1 0 100%;
@@ -732,5 +734,63 @@ li.selected {
 
     .number-name {
         font-size: 1em;
+    }
+}
+
+/* ---------------------------------------------- */
+/*                  STAFF-TABLE                   */
+/* ---------------------------------------------- */
+
+#staff-table {
+    gap: 0.3em;
+    margin-top: 2em;
+}
+
+#staff-table .row {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 2px;
+}
+
+.staff-title, .staff-person {
+    padding: 0.5em 0.4em;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.staff-title {
+    font-weight: 500;
+    background-color: rgba(228, 228, 228, 0.8);
+}
+
+.staff-person {
+    font-weight: 300;
+    background-color: rgba(232, 232, 232, 0.603);
+}
+
+@media (min-width: 480px) {
+    #staff-table {
+        margin: 0.5em 0;
+    }
+
+    #cos-tecnic .players {
+        padding-bottom: 0 !important;
+    }
+
+    #staff-table .row {
+        flex-direction: row;
+        gap: 1px;
+    }
+
+    #staff-table .row span {
+        flex: 50%;
+    }
+}
+
+@media (min-width: 840px) {
+    #staff-table {
+        padding: 0 3rem;
+        font-size: 1.25em;
     }
 }
