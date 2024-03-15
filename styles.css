@@ -389,13 +389,22 @@ li.selected {
     border-radius: 1.5em;
 }
 
+@media (min-width: 840px) {
+    #first-team {
+        margin: 0 auto;
+        max-width: 95%;
+    }
+}
+
+@media (min-width: 1500px) {
+    #first-team {
+        max-width: 88rem
+    }
+}
+
 #first-team-header {
     padding: 0.5em;
     padding-bottom: 0.85em;
-}
-
-#first-team-header > * {
-    flex: 1;
 }
 
 #first-team-header h2 {
@@ -403,6 +412,29 @@ li.selected {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 840px) {
+    #first-team-header h2 {
+        font-size: 1.8em;
+    }
+
+    #presented-sponsor {
+        display: flex;
+        align-items: center;
+    }
+
+    #presented-sponsor span {
+        padding: 0 1.5em;
+        border-right: 1px solid rgba(0, 0, 0, 0.5);
+        line-height: 2;
+    }
+
+    #presented-sponsor-container {
+        padding: 0 1.5em;
+    }
+
+
 }
 
 #presented-sponsor span {
@@ -428,6 +460,14 @@ li.selected {
     overflow-y: scroll;
     padding: 6px 0;
     margin: 1.5em 0;
+    max-width: 100%;
+    justify-content: flex-start;
+}
+
+@media (min-width: 550px) {
+    #first-team-roles {
+        justify-content: center;
+    }
 }
 
 #first-team-roles li {
@@ -480,9 +520,34 @@ li.selected {
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
+    .player-role h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 840px) {
+    .player-role h3 {
+        font-size: 1.8em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .player-role h3 {
+        font-size: 2.2em;
+    }
+}
+
+@media (min-width: 840px) {
     .players {
         grid-template-columns: repeat(3, 1fr);
+        padding: 2em 3em;
+    }
+}
+
+@media (min-width: 1500px) {
+    .player {
+        max-width: 460px;
     }
 }
 
@@ -507,7 +572,7 @@ li.selected {
 .player-back-header {
     position: absolute;
     bottom: 12%;
-    width: 90;
+    width: 90%;
     transform: translate(-50%);
     font-size: 4.5rem;
     text-transform: uppercase;
@@ -532,7 +597,7 @@ li.selected {
     position: absolute;
     bottom: 8%;
     left: 50%;
-    width: 60%;
+    width: 80%;
     transform: translate(-50%, 0);
     font-size: 1.5rem;
     line-height: 1.2;
@@ -554,6 +619,7 @@ li.selected {
 
 .player-stats {
     text-transform: uppercase;
+    font-weight: bold;
     position: absolute;
     right: 0;
     left: 0;
@@ -565,29 +631,30 @@ li.selected {
     font-size: 0.8em;
     display: flex;
     justify-content: center;
-    padding: 1em 0;
+    padding: 0.5em 0;
     border-top: 1px solid var(--gray);
-    margin: 0 1.5em;
 }
 
 .stats-column {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.8em;
 }
 
 .stat-number {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 
 @media (min-width: 840px) {
     .player:hover .player-back-header {
-        transform: translate(-50%, -30%);
+        transform: translate(-50%, -30%) scale(130%);
     }
 
     .player:hover .player-main-header {
-        transform: translate(-50%, -85%);
+        transform: translate(-50%, -60%);
     }
 
     .player:hover .player-stats {
@@ -596,5 +663,64 @@ li.selected {
 
     .stat-season, .stat-best {
         display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .player-back-header {
+        font-size: 4.5em;
+    }
+
+    .player:hover .player-main-header {
+        width: 100%;
+        padding: 0 0.5em;
+        transform: translate(-50%, -220%);
+    }
+    
+    .number-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        text-wrap: nowrap;
+        font-size: 0.8em;
+    }
+
+    .stat-season, .stat-best {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stat-number {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .stat-season {
+        color: gray;
+        font-weight: 600;
+        font-size: 0.9em;
+    }
+
+    .stat-best {
+        color: var(--yellow);
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .player:hover .player-main-header {
+        width: 100%;
+        padding: 0 0.5em;
+        transform: translate(-50%, -160%);
+    }
+
+    .player-back-header {
+        font-size: 5.5em;
+    }
+
+    .number-name {
+        font-size: 1em;
     }
 }
