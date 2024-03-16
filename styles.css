@@ -1093,6 +1093,8 @@ li.selected {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5em;
+    max-width: 70rem;
+    margin: 0 auto;
 }
 
 .social-media {
@@ -1108,13 +1110,13 @@ li.selected {
     font-weight: 500;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 450px) {
     .social-media {
         flex: 0 1 30%;
     }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 840px) {
     .social-media {
         flex: 0 1 15%;
     }
