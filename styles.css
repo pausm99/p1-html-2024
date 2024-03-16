@@ -66,9 +66,14 @@ a {
 /*                  UPPER-NAVBAR                  */
 /* ---------------------------------------------- */
 
+#logo-link-mobile {
+    display: none;
+}
+
 #upper-section {
     background-color: #0a0927;
     color: var(--white-color);
+    text-align: center;
 }
 
 #announcement {
@@ -78,6 +83,16 @@ a {
     font-weight: 500;
     font-size: 0.8em;
     cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    #upper-section {
+        justify-content: flex-end;
+    }
+
+    #announcement {
+        display: none;
+    }
 }
 
 #announcement span:last-of-type {
@@ -95,7 +110,7 @@ a {
     font-size: 0.85em;
 }
 
-#user-section button {
+#user-section button:not(#mobile-nav-button) {
     color: var(--white-color);
     height: 25px;
     padding: 1.5em;
@@ -137,6 +152,10 @@ a {
     background: linear-gradient(90deg, rgb(152, 0, 0), var(--red-color));
 }
 
+#mobile-nav-button {
+    display: none;
+}
+
 .user-section-link {
     background-color: var(--gray);
     border-radius: 50%;
@@ -163,6 +182,111 @@ a {
 
 .user-section-link:hover {
     background-color: var(--red-color);
+}
+
+@media (max-width: 1100px) {
+    header {
+        position: relative;
+    }
+
+    #upper-section {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        background: radial-gradient(circle, rgb(18, 48, 93) 0%, rgba(10,9,39,1) 66%);
+    }
+
+    #logo-link-mobile {
+        display: block;
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+    }
+
+    #logo-link-mobile img {
+        height: 4em;
+        width: auto;
+    }
+
+    #first-nav {
+        display: block !important;
+        font-size: 0.7em !important;
+    }
+
+    #right-nav {
+        width: 100%;
+        display: block !important;
+    }
+
+    #right-nav ul {
+        justify-content: space-between;
+        max-width: 95%;
+        margin: 0 auto !important;
+    }
+
+    #user-section {
+        padding-right: 1em;
+        gap: 0.7em;
+        background: none;
+    }
+
+    #user-section button:last-of-type, #user-section a {
+        display: none;
+    }
+
+    #user-section button:first-of-type {
+        background: linear-gradient(90deg, rgb(152, 0, 0), var(--red-color));
+        border-radius: 5px !important;
+        padding: 1.4em 0.5em !important;
+    }
+
+    #user-section button:first-of-type span {
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    #mobile-nav-button {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--gray);
+        border-radius: 100%;
+        padding: 1.1em 1em;
+        gap: 3px;
+    }
+
+    #mobile-nav-button .bar {
+        display: block;
+        height: 1px;
+        width: 14px;
+        background-color: var(--white-color);
+        margin: 0;
+    }
+
+    #right-nav span {
+        display: none !important;
+    }
+
+    #left-nav {
+        display: none;
+    }
+
+    #second-nav {
+        height: 0.3em;
+    }
+
+    #second-nav ul {
+        display: none !important;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1100px) {
+    #first-nav {
+        font-size: 1em !important;
+    }
+
+    #right-nav ul {
+        max-width: 80%;
+    }
 }
 
 
@@ -330,7 +454,7 @@ li.selected {
     background-repeat: no-repeat;
     background-position: left;
     position: absolute;
-    width: 120%;
+    width: 100%;
     height: 100%;
 }
 
