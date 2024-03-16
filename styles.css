@@ -1156,3 +1156,137 @@ li.selected {
 .social-account {
     font-size: 0.7em;
 }
+
+/* ---------------------------------------------- */
+/*                     FOOTER                     */
+/* ---------------------------------------------- */
+
+#footer {
+    color: var(--white-color);
+    margin-top: 2em;
+}
+
+@media (min-width: 1500px) {
+    #footer {
+        max-width: 88rem;
+        margin: 0 auto;
+        margin-top: 5rem;
+    }
+
+    #sitemap {
+        padding: 0;
+    }
+}
+
+#sitemap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 1em;
+    padding: 0 2em;
+}
+
+@media (min-width: 650px) {
+    #sitemap {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 840px) {
+    #sitemap {
+        display: flex;
+    }
+}
+
+.sitemap-column { 
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sitemap-column-header {
+    margin-bottom: 1em;
+}
+
+.sitemap-column-body {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+#sitemap-corp {
+    padding: 2em;
+    padding-bottom: 0.5em;   
+}
+
+#footer-icon {
+    margin-bottom: 2em;
+}
+
+#footer-icon svg {
+    height: 30px;
+    width: auto;
+    fill: var(--white-color);
+}
+
+#footer-links {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.7em;
+    flex-direction: column;
+    align-items: center;
+}
+
+#copyright {
+    font-size: 0.8em;
+    padding: 0.5em 0;
+    padding-bottom: 1.5em;
+}
+
+#copyright span:first-of-type {
+    color: var(--white-color);
+}
+
+#interest-links li {
+    padding: 0.7em 0;
+}
+
+#footer-gradient {
+    width: 100%;
+    height: 0.5em;
+    background: linear-gradient(270deg, var(--blue-color), var(--red-color));
+}
+
+@media (min-width: 840px) {
+    #sitemap-corp {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    #footer-links {
+        flex-direction: row;
+        gap: 1em;
+        align-items: baseline;
+    }
+
+    #interest-links {
+        flex-direction: row;
+    }
+
+    #interest-links li {
+        text-wrap: nowrap;
+        font-size: 0.8em;
+        border-right: 1px solid rgb(206, 206, 206);
+        padding: 0 1em;
+        height: fit-content;
+    }
+
+    #interest-links li:last-of-type {
+        border: none;
+    }
+
+    #footer-gradient {
+        height: 1em;
+    }   
+}
