@@ -471,10 +471,12 @@ li.selected {
 
 #hero-section h1 {
     color: var(--yellow);
-    font-size: 3em;
+    font-size: 1.5em;
     text-align: center;
     position: relative;
     z-index: 2;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 #hero-photo {
@@ -500,6 +502,19 @@ li.selected {
     height: 25%;
     width: 100%;
 
+}
+
+@media (min-width: 800px) {
+    #hero-section h1 {
+        max-width: 100%;
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1000px) {
+    #hero-section h1 {
+        font-size: 2.5em;
+    }
 }
 
 /* ---------------------------------------------- */
