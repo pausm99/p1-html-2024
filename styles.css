@@ -970,12 +970,32 @@ li.selected {
     align-items: center;
     justify-content: space-around;
     height: 10rem;
-    background-image: url('/img/trophie-pattern.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     padding: 0 3em;
     position: relative;
+}
+
+.title-section > * {
+    position: relative;
+    z-index: 3;
+}
+
+.title-section-background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/trophie-pattern.jpeg');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+@media (min-width: 840px) {
+    .title-section-background {
+        display: none;
+    }
 }
 
 .title-section-black-background {
@@ -985,7 +1005,7 @@ li.selected {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .title-header {
